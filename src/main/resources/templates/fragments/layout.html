@@ -1,0 +1,39 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<header class="topbar d-flex justify-content-between" th:fragment="pageHeader(authUser)">
+    <div>
+        <b th:text="${authUser.email}"></b>
+        with roles:
+        <span th:each="role, stat : ${authUser.roles}"
+              th:text="${#strings.replace(role.roleName, 'ROLE_', '')} + (${stat.last} ? '' : ', ')"></span>
+    </div>
+    <form method="post" action="/logout">
+        <button class="btn btn-link text-muted">Logout</button>
+    </form>
+</header>
+
+<section th:fragment="userTable(user)">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>ID</th><th>First Name</th><th>Last Name</th><th>Age</th><th>Email</th><th>Role</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.firstName}"></td>
+            <td th:text="${user.lastName}"></td>
+            <td th:text="${user.age}"></td>
+            <td th:text="${user.email}"></td>
+            <td>
+                <span th:each="role, stat : ${user.roles}"
+                      th:text="${#strings.replace(role.roleName, 'ROLE_', '')} + (${stat.last} ? '' : ', ')"></span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+</body>
+</html>
