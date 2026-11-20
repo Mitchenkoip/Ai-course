@@ -1,0 +1,150 @@
+body {
+    min-height: 100vh;
+    background: #f8f9fa;
+    color: #212529;
+}
+
+.topbar {
+    min-height: 60px;
+    align-items: center;
+    background: #343a40;
+    color: #fff;
+    padding: 10px 24px;
+}
+
+.layout {
+    display: flex;
+    gap: 24px;
+    margin: 20px 24px 32px 18px;
+}
+
+.sidebar {
+    flex: 0 0 17%;
+    min-width: 150px;
+    max-width: 280px;
+    padding-top: 0;
+}
+
+.sidebar .nav-link {
+    border-radius: 4px;
+}
+
+.layout > main {
+    min-width: 0;
+}
+
+.layout h1,
+.layout h2 {
+    font-weight: 400;
+}
+
+.layout h1 {
+    margin: 0 0 18px;
+    font-size: 2.5rem;
+}
+
+.layout h2 {
+    margin: 0;
+    font-size: 1.35rem;
+}
+
+.admin-content {
+    border: 1px solid #dee2e6;
+    border-radius: 0 4px 4px 4px;
+    padding: 0 !important;
+}
+
+.admin-content > .tab-pane > .card {
+    border: 0;
+}
+
+.user-card {
+    border-radius: 4px;
+}
+
+.user-card .card-header {
+    padding: 14px 24px;
+    background: #f7f7f7;
+}
+
+.user-card .card-body {
+    padding: 24px;
+}
+
+.user-card table {
+    margin: 0;
+}
+
+.admin-content .card-header {
+    padding: 14px 24px;
+    background: #f7f7f7;
+}
+
+.admin-content .card-body {
+    padding: 24px;
+}
+
+#usersTable {
+    min-width: 760px;
+    margin: 0;
+}
+
+.role-select {
+    height: 68px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.add-form {
+    width: 350px;
+    max-width: 100%;
+    margin: 4px auto 0;
+    text-align: center;
+}
+
+.add-form .form-group {
+    margin-bottom: 20px;
+}
+
+.add-form label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.add-form .btn {
+    font-size: 1.25rem;
+}
+
+.table-hover tbody tr:hover {
+    background: #f1f1f1;
+}
+
+.modal-content {
+    border: 0;
+    border-radius: 5px;
+}
+
+@media (max-width: 767.98px) {
+    .layout {
+        gap: 12px;
+        margin: 14px 10px;
+    }
+
+    .sidebar {
+        flex-basis: 115px;
+        min-width: 115px;
+    }
+
+    .layout h1 {
+        font-size: 1.8rem;
+    }
+
+    .admin-content .card-body {
+        padding: 14px;
+    }
+
+    .topbar {
+        padding: 10px 12px;
+    }
+}
